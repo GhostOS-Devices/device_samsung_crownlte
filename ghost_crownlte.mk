@@ -27,11 +27,13 @@ $(call inherit-product, device/samsung/crownlte/device.mk)
 TARGET_SCREEN_HEIGHT := 2960
 TARGET_SCREEN_WIDTH := 1440
 
-## Inherit some common Pixel OS stuff
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+## Inherit some common GhostOS stuff
+$(call inherit-product, vendor/ghost/build/common.mk)
+
+GHOST_BUILD_VARIANT := OFFICIAL
 
 ## Device identifier, this must come after all inclusions
-PRODUCT_NAME := aosp_crownlte
+PRODUCT_NAME := ghost_crownlte
 PRODUCT_DEVICE := crownlte
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-N960F
